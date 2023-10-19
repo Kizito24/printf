@@ -19,6 +19,7 @@ typedef struct print_type
 }print_t;
 
 int _putchar(char c);
-int print_char;
+int print_char(valist val);
+int print_int(valist val);
 
 #endif
