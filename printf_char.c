@@ -7,7 +7,7 @@
  * Return: 1 when succesful
  */
 
-int printf_char(valist val)
+int printf_char(va_list val)
 {
 	char c;
 

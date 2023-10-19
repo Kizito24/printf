@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * printf_int - prints decimal number to stdout.
- * @val: int argument to be printed
+ * printf_dec - prints decimal numbers to stdout
+ * @val: decimal integer from the argument list.
  *
- * Return: length of succesfully printed characters.
+ * Return: number of decimals printed.
  */
 
-int printf_int(va_list val)
+int printf_dec(va_list val)
 {
 	int n1, rslt = 1, int_len = 0;
 	unsigned int n2;
@@ -22,7 +22,7 @@ int printf_int(va_list val)
 	else
 		n2 = n1;
 
-	while ((n2 / rslt) > 9)
+	while ((n2 / rslt) < 9)
 		rslt *= 10;
 
 	while (rslt != 0)
@@ -31,6 +31,5 @@ int printf_int(va_list val)
 		n2 %= rslt;
 		rslt /= 10;
 	}
-
 	return (int_len);
 }
